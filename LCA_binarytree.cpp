@@ -4,6 +4,8 @@ we recur for left and right subtree. The node which has one key present in its l
 the other key present in right subtree is the LCA. If both keys lie in left subtree, then left subtree has LCA also, 
 otherwise LCA lies in right subtree. Got TLE in HACKERRANK */
 
+/* another method is to add node data to a vector for n1 and for n2 in another vector
+   compare vectors and common element in vectors is LCA */
 #include <climits>
 #include <cstdio>
 #include <vector>
