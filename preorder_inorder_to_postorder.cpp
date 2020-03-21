@@ -7,7 +7,7 @@ using namespace std;
 int idx=0;
 int Search(int *in,int data,int low,int high)     // searching each element of pre in IN
 {
-    for(int i=low;i<=high;i++)
+    for(int i=low;i<=high;i++)                    // when high and low are equal high=low=i
     {
         if(in[i]==data)
             return i;                            // returning index i
