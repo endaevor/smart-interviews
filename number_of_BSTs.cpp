@@ -44,9 +44,9 @@ node* create(node* root,int *arr,int idx,int n)        //create tree
 
 range n_bst(node* root)            // fn to count number of BSTs , return type structure
 {
-    if(root==NULL)                         /// if root is equal to null
+    if(root==NULL)                         // if root is equal to null
     {
-        return {INT_MIN,INT_MAX,true,0};
+        return {INT_MAX,INT_MIN,true,0};       // check base condition (int max & int min)  #tricky
     }
     if(root->left==NULL && root->right==NULL)        // if leaf node - it is bst
     {
@@ -70,7 +70,7 @@ range n_bst(node* root)            // fn to count number of BSTs , return type s
     }
     
     temp.min=min(root->data,min(L.min,R.min));               // changing range of tree left side
-    temp.max=max(root->data,max(L.min,R.min));               // changing range of tree right side
+    temp.max=max(root->data,max(L.max,R.max));               // changing range of tree right side
     
     return temp;
 }
